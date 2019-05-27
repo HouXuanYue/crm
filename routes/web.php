@@ -17,5 +17,9 @@
 
 Route::get('/','IndexController@index');
 
+Route::prefix('/order')->group(function(){
+	Route::get('create','OrderController@create');
+});
+
 
 

@@ -25,7 +25,7 @@
         </li><li class="layui-nav-item">
           <a href="javascript:;">订单管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">订单添加</a></dd>
+            <dd><a href="{{url('order/create')}}">订单添加</a></dd>
             <dd><a href="javascript:;">订单管理</a></dd>
           </dl>
         </li>
