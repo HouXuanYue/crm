@@ -19,7 +19,7 @@
         <li class="layui-nav-item">
           <a href="javascript:;">合同管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">合同添加</a></dd>
+            <dd><a href="/agree/add">合同添加</a></dd>
             <dd><a href="javascript:;">合同列表</a></dd>
           </dl>
         </li><li class="layui-nav-item">

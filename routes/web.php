@@ -17,5 +17,11 @@
 
 Route::get('/','IndexController@index');
 
+//合同管理
+Route::prefix('agree')->group(function(){
+    Route::get('index','AgreeController@index');
+    Route::get('add','AgreeController@create');
+    Route::post('add_do','AgreeController@store');
 
+});
 
