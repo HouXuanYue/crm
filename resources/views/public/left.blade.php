@@ -3,24 +3,53 @@
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
         <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">所有商品</a>
+          <a class="" href="javascript:;">客户管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">列表三</a></dd>
-            <dd><a href="">超链接</a></dd>
+            <dd><a href="javascript:;">客户添加</a></dd>
+            <dd><a href="javascript:;">客户列表</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
-          <a href="javascript:;">解决方案</a>
+          <a href="javascript:;">销售管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="">超链接</a></dd>
+            <dd><a href="javascript:;">销售添加</a></dd>
+            <dd><a href="javascript:;">销售管理</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item"><a href="">云市场</a></li>
-        <li class="layui-nav-item"><a href="">发布商品</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">合同管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">合同添加</a></dd>
+            <dd><a href="javascript:;">合同列表</a></dd>
+          </dl>
+        </li><li class="layui-nav-item">
+          <a href="javascript:;">订单管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">订单添加</a></dd>
+            <dd><a href="javascript:;">订单管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">产品管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">产品添加</a></dd>
+            <dd><a href="javascript:;">产品管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">供应商管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">供应商添加</a></dd>
+            <dd><a href="javascript:;">供应商管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">管理员</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">管理员添加</a></dd>
+            <dd><a href="javascript:;">管理员列表</a></dd>
+          </dl>
+        </li>
       </ul>
     </div>
   </div>
