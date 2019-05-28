@@ -12,10 +12,14 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('welcome'); 
 // });
 
 Route::get('/','IndexController@index');
 
-
-
+Route::prefix('/connection')->group(function(){
+	Route::get('add','ConnectionController@create');
+	Route::post('add_do','ConnectionController@store');
+	Route::get('index','ConnectionController@index');
+	Route::post('destroy','ConnectionController@destroy');
+});

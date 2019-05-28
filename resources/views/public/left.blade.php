@@ -5,8 +5,8 @@
         <li class="layui-nav-item layui-nav-itemed">
           <a class="" href="javascript:;">客户管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">客户添加</a></dd>
-            <dd><a href="javascript:;">客户列表</a></dd>
+            <dd><a href="/connection/add">客户添加</a></dd>
+            <dd><a href="/connection/index">客户列表</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
