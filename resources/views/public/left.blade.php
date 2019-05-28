@@ -32,8 +32,8 @@
         <li class="layui-nav-item">
           <a href="javascript:;">产品管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">产品添加</a></dd>
-            <dd><a href="javascript:;">产品管理</a></dd>
+            <dd><a href="{{url('/product/add')}}">产品添加</a></dd>
+            <dd><a href="{{url('/product/list')}}">产品列表</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">

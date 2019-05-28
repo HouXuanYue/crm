@@ -25,3 +25,10 @@ Route::prefix('agree')->group(function(){
 
 });
 
+Route::prefix('product')->group(function(){
+    Route::get('add','ProductController@create');
+    Route::post('adddo','ProductController@adddo');
+    Route::get('list','ProductController@index');
+    Route::post('del','ProductController@del');
+});
+
