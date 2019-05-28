@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -227,6 +227,12 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+<<<<<<< HEAD
     'pageSize' =>5,
+=======
+    'pageSize'=> 2,
+
+    'pagesize'=>2
+>>>>>>> a2250dc305cd8483189aa5675767afaf10ffa6a2
 
 ];
