@@ -6,7 +6,7 @@
   <title>layout @yield('title') - Layui</title>
   <link rel="stylesheet" href="/layui/css/layui.css">
  
-  <script src="/layui/layui.js"></script>
+
 
 </head>
 <body class="layui-layout-body">
