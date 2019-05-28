@@ -39,8 +39,8 @@
         <li class="layui-nav-item">
           <a href="javascript:;">供应商管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">供应商添加</a></dd>
-            <dd><a href="javascript:;">供应商管理</a></dd>
+            <dd><a href="{{url('supplier/add')}}">供应商添加</a></dd>
+            <dd><a href="{{url('supplier/index')}}">供应商管理</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">

@@ -25,3 +25,12 @@ Route::prefix('agree')->group(function(){
 
 });
 
+//供应商管理
+Route::prefix('/supplier')->group(function(){
+    Route::get('index','SupplierController@index');
+    Route::get('add','SupplierController@create');
+    Route::post('add_do','SupplierController@store');
+    Route::get('del/{id}','SupplierController@destroy');
+
+});
+
