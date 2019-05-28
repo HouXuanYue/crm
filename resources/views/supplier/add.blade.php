@@ -2,6 +2,8 @@
 @section('title','crm客户系统')
 
 @section('content')
+<script src="/js/jquery.js"></script>
+
 <form class="layui-form" onsubmit="return false">
   <div class="layui-form-item">
     <label class="layui-form-label">供应商名称</label>
