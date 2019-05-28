@@ -19,13 +19,13 @@
         <li class="layui-nav-item">
           <a href="javascript:;">合同管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">合同添加</a></dd>
+            <dd><a href="/agree/add">合同添加</a></dd>
             <dd><a href="javascript:;">合同列表</a></dd>
           </dl>
         </li><li class="layui-nav-item">
           <a href="javascript:;">订单管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">订单添加</a></dd>
+            <dd><a href="{{url('order/create')}}">订单添加</a></dd>
             <dd><a href="javascript:;">订单管理</a></dd>
           </dl>
         </li>
@@ -39,8 +39,8 @@
         <li class="layui-nav-item">
           <a href="javascript:;">供应商管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">供应商添加</a></dd>
-            <dd><a href="javascript:;">供应商管理</a></dd>
+            <dd><a href="{{url('supplier/add')}}">供应商添加</a></dd>
+            <dd><a href="{{url('supplier/index')}}">供应商管理</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
