@@ -58,6 +58,8 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+
+        echo 123;
     }
 
     public function edit($id)
