@@ -46,7 +46,7 @@
         <li class="layui-nav-item">
           <a href="javascript:;">管理员</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">管理员添加</a></dd>
+            <dd><a href="/user/index">管理员添加</a></dd>
             <dd><a href="javascript:;">管理员列表</a></dd>
           </dl>
         </li>
