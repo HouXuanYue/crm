@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>layout @yield('title') - Layui</title>
   <link rel="stylesheet" href="/layui/css/layui.css">
+ 
   <script src="/layui/layui.js"></script>
+<<<<<<< HEAD
+  
+=======
+  <script src="/js/jquery.js"></script>
+>>>>>>> 7cfdf8f924bb66eb0912a583e25d6560f02b18af
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
