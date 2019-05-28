@@ -36,6 +36,15 @@ Route::prefix('agree')->group(function(){
     Route::get('index','AgreeController@index');
     Route::get('add','AgreeController@create');
     Route::post('add_do','AgreeController@store');
+    Route::post('checkOnly','AgreeController@checkOnly');
+
+});
+
+//分类管理
+Route::prefix('category')->group(function(){
+    Route::get('index','CategoryController@index');
+    Route::get('add','CategoryController@create');
+    Route::post('add_do','CategoryController@store');
 
 
 });

@@ -20,7 +20,7 @@
           <a href="javascript:;">合同管理</a>
           <dl class="layui-nav-child">
             <dd><a href="/agree/add">合同添加</a></dd>
-            <dd><a href="javascript:;">合同列表</a></dd>
+            <dd><a href="/agree/index">合同列表</a></dd>
           </dl>
         </li><li class="layui-nav-item">
           <a href="javascript:;">订单管理</a>
@@ -48,6 +48,13 @@
           <dl class="layui-nav-child">
             <dd><a href="javascript:;">管理员添加</a></dd>
             <dd><a href="javascript:;">管理员列表</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">分类管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/category/add">分类添加</a></dd>
+            <dd><a href="/cate/index">分类列表</a></dd>
           </dl>
         </li>
       </ul>

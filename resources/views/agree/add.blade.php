@@ -1,75 +1,135 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>话题添加-有点</title>
-<link rel="stylesheet" type="text/css" href="/agree/css/css.css" />
-<script type="text/javascript" src="/agree/js/jquery.min.js"></script>
-</head>
-<body>
-  <div id="pageAll">
-    <div class="pageTop">
-      <div class="page">
-        <img src="/agree/img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
-          href="#">公共管理</a>&nbsp;-</span>&nbsp;话题添加
-      </div>
-    </div>
-    <div class="page ">
-      <!-- 上传广告页面样式 -->
-      <div class="banneradd bor">
-        <div class="baTopNo">
-          <span>话题添加</span>
-        </div>
-        <div class="baBody">
-          <div class="bbD">
-            合同标题：<input type="text" class="input3" name="a_title"/>
-          </div>
-          <div class="bbD">
-            客户姓名：
-                      <select class="input3" name="c_id">
-                    @foreach($data as $k=>$v)
-                        <option value="c_id">{{$v->c_name}}</option>
-                    @endforeach
-                      </select>
-          </div>
-          <div class="bbD">
-            客户金额：<input type="text" class="input3" name="a_money"/>
-          </div>
-          <div class="bbD">
-            结束时间：<input type="text" class="input3" name="end_time"/>
-          </div>
-          
-          
-          <div class="bbD">
-            合同状态：<label><input type="radio" checked="checked"
-              name="a_status" value="未审核"/>&nbsp;未审核</label> <label><input
-              type="radio" name="a_status" value="已通过"/>&nbsp;已通过</label> <label class="lar"><input
-              type="radio" name="a_status" value="不通过"/>&nbsp;不通过</label>
-          </div>
-          <div class="bbD">
-            是否付款：<label><input type="radio" checked="checked"
-              name="money_status" value="是"/>&nbsp;是</label><label><input type="radio"
-              name="money_status" value="否"/>&nbsp;否</label>
-          </div>
-          <div class="bbD">
-            <p class="bbDP">
-              <!-- <button class="btn_ok btn_yes" href="#">提交</button> -->
-              <input type="button" value="提交" id="tj" class="btn_ok btn_yes"/>
-              <a class="btn_ok btn_no" href="#">取消</a>
-            </p>
-          </div>
-        </div>
-      </div>
+@extends('layouts.crm')
+@section('title','crm客户系统')
 
-      <!-- 上传广告页面样式end -->
+@section('content')
+<form class="layui-form" onsubmit="return false" >
+{{csrf_field()}}
+<meta name="csrf-token" content="{{ csrf_token() }}">
+  <div class="layui-form-item">
+    <label class="layui-form-label">合同标题</label>
+    <div class="layui-input-block">
+      <input type="text" name="a_title" required id="title"  lay-verify="required|checkName" placeholder="请输入标题" autocomplete="off" class="layui-input">
+      <span id="span"></span>
     </div>
   </div>
-</body>
-</html>
+ 
+  <div class="layui-form-item">
+    <label class="layui-form-label">客户名称</label>
+    <div class="layui-input-block">
+      <select name="c_id" lay-verify="required">
 
+        
+        @foreach($data as $k=>$v)
+          <option value="{{$v->c_id}}">{{$v->c_name}}</option>
+        @endforeach
+
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">合同金额</label>
+    <div class="layui-input-block">
+      <input type="text" name="a_money" required  lay-verify="required|money" placeholder="请输入金额" autocomplete="off" class="layui-input">
+      
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">结束时间</label>
+    <div class="layui-input-block">
+      <input type="text" name="end_time" required  lay-verify="required" placeholder="格式: 2019/05/28" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+
+  
+  <div class="layui-form-item">
+    <label class="layui-form-label">合同状态</label>
+    <div class="layui-input-block">
+      <input type="radio" name="a_status" value="待审核" title="待审核">
+      <input type="radio" name="a_status" value="已通过" title="已通过" checked>
+      <input type="radio" name="a_status" value="不通过" title="不通过" checked>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">是否付款</label>
+    <div class="layui-input-block">
+      <input type="radio" name="money_status" value="是" title="是">
+      <input type="radio" name="money_status" value="否" title="否" checked>
+    </div>
+  </div>
+  
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+ 
 <script>
-  $("#tj").click(function(){
-    var fd= new FormData($("#tj")[0]);
-    console.log(fd);
-  })
+//Demo
+layui.use(['form','layer','jquery'], function(){
+  var form = layui.form;
+  var layer = layui.layer;
+  var $ = layui.jquery;
+
+   $.ajaxSetup({
+         headers: {
+         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+         }
+      });
+  
+  
+  form.verify({
+
+    checkName:function(value){
+     
+      var text=true;
+      $.ajax({
+        url:'checkOnly',
+        method:'post',
+        data:{a_title:value},
+        async:false,
+        success:function(data){
+          //console.log(data);
+          if (data>0) {
+           text="合同标题已存在!"
+          };
+        },
+        dataType:'json',
+      });
+      return text;
+    },
+
+
+
+    money:function(value){
+      var reg=/^[0-9]{1,10}$/;
+      if (!reg.test(value)) {
+        return "合同金额必须为整数,最大不能超过十亿";
+      };
+    },
+    
+    
+  });
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+   //console.log(data);
+    $.post(
+      "add_do",
+      data.field,
+      function(msg){
+        layer.msg(msg.msg,{icon:msg.code,time:2000},function(){
+          if (msg.code == 1) {
+            location.href = "index";
+          };
+        });
+      },'json'
+      )
+    return false;
+  });
+});
 </script>
+@endsection
+
+
