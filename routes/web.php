@@ -17,5 +17,11 @@
 
 Route::get('/','IndexController@index');
 
+Route::prefix('/market')->group(function(){
+	Route::get('add','MarketController@add');
+	Route::get('doadd','MarketController@doadd');
+	Route::get('list','MarketController@list');
+	Route::get('del','MarketController@del');
 
+});
 

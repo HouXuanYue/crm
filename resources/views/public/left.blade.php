@@ -12,8 +12,8 @@
         <li class="layui-nav-item">
           <a href="javascript:;">销售管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">销售添加</a></dd>
-            <dd><a href="javascript:;">销售管理</a></dd>
+            <dd><a href="/market/add">销售添加</a></dd>
+            <dd><a href="/market/list">销售管理</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
